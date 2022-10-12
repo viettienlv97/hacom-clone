@@ -65,6 +65,7 @@ export default {
         border-bottom: 1px solid #ccc;
         font-size: 11px;
         align-items: center;
+        background-color: #ffffff;
     }
     .container{
         max-width: 1180px;
