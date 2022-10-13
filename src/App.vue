@@ -3,6 +3,7 @@
   <main-header />
   <homepage-slider />
   <banner-bottom-slider />
+  <list-colection-home />
   <div class="main"></div>
 </template>
 
@@ -11,6 +12,7 @@ import HeaderWrapper from './components/HeaderWrapper.vue'
 import MainHeader from './components/MainHeader.vue'
 import HomepageSlider from './components/HomepageSlider.vue'
 import BannerBottomSlider from './components/BannerBottomSlider.vue'
+import ListColectionHome from './components/ListColectionHome.vue'
 
 export default {
   name: 'App',
@@ -18,7 +20,8 @@ export default {
     HeaderWrapper,
     MainHeader,
     HomepageSlider,
-    BannerBottomSlider
+    BannerBottomSlider,
+    ListColectionHome
   }
 }
 </script>
