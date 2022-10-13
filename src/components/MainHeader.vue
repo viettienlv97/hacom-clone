@@ -1,7 +1,7 @@
 <template>
     <div class="main-header">
         <div class="logo">
-            <a href="index.html"><img src="@/assets/Logo/logo.png" alt=""></a>
+            <a href="index.html"><img src="@/assets/logo/logo.png" alt=""></a>
         </div>
         <div class="search-bar">
             <input type="text" placeholder="Nhập tên sản phẩm, từ khoá cần tìm">

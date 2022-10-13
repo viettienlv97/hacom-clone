@@ -1,8 +1,18 @@
 <template>
     <div class="homepage-slider">
         <div class="slider-left">
-            <ul>
-                <li @click="logger($event, index)" v-for="(item,index) in sliderList" :key="index">{{item}}</li>
+            <ul
+                @mouseover="listShow = true"
+                @mouseleave="listShow = false">
+                <li
+                @mouseover="logger($event, index)"
+                v-for="(item,index) in sliderList"
+                :key="index"
+                >{{item}}
+                </li>
+                <component
+                v-show="listShow"
+                :is="currentComponent" />
             </ul>
         </div>
         <div class="slider-container">
@@ -25,7 +35,48 @@
 </template>
 
 <script>
+import ListOne from './LeftSliderList/ListOne.vue'
+import ListTwo from './LeftSliderList/ListTwo.vue'
+import ListThree from './LeftSliderList/ListThree.vue'
+import ListFour from './LeftSliderList/ListFour.vue'
+import ListFive from './LeftSliderList/ListFive.vue'
+import ListSix from './LeftSliderList/ListSix.vue'
+import ListSeven from './LeftSliderList/ListSeven.vue'
+import ListEight from './LeftSliderList/ListEight.vue'
+import ListNine from './LeftSliderList/ListNine.vue'
+import ListTen from './LeftSliderList/ListTen.vue'
+import ListEleven from './LeftSliderList/ListEleven.vue'
+import ListTwelve from './LeftSliderList/ListTwelve.vue'
+import ListThirteen from './LeftSliderList/ListThirteen.vue'
+import ListFourteen from './LeftSliderList/ListFourteen.vue'
+import ListFifteen from './LeftSliderList/ListFifteen.vue'
+import ListSixteen from './LeftSliderList/ListSixteen.vue'
+import ListSeventeen from './LeftSliderList/ListSeventeen.vue'
+import ListEighteen from './LeftSliderList/ListEighteen.vue'
+
 export default {
+  components: {
+    // eslint-disable-next-line vue/no-unused-components
+    ListOne,
+    ListTwo,
+    ListThree,
+    ListFour,
+    ListFive,
+    ListSix,
+    ListSeven,
+    ListEight,
+    ListNine,
+    ListTen,
+    ListEleven,
+    ListTwelve,
+    ListThirteen,
+    ListFourteen,
+    ListFifteen,
+    ListSixteen,
+    ListSeventeen,
+    ListEighteen
+
+  },
   data () {
     return {
       sliderList: [
@@ -47,12 +98,90 @@ export default {
         'Họp, Giảng Dạy, Stream',
         'Thiết Bị Lưu Trữ, USB, Thẻ',
         'Thiết Bị Mạng, Phần Mềm'
-      ]
+      ],
+      leftList: [
+        'ListOne',
+        'ListTwo',
+        'ListThree',
+        'ListFour',
+        'ListFive',
+        'ListSix',
+        'ListSeven',
+        'ListEight',
+        'ListNine',
+        'ListTen',
+        'ListEleven',
+        'ListTwelve',
+        'ListThirteen',
+        'ListFourteen',
+        'ListFifteen',
+        'ListSixteen',
+        'ListSeventeen'
+      ],
+      currentComponent: '',
+      listShow: false
     }
   },
   methods: {
     logger (e, i) {
-      console.log(i)
+      switch (i) {
+        case 0:
+          this.currentComponent = ListOne
+          break
+        case 1:
+          this.currentComponent = ListTwo
+          break
+        case 2:
+          this.currentComponent = ListThree
+          break
+        case 3:
+          this.currentComponent = ListFour
+          break
+        case 4:
+          this.currentComponent = ListFive
+          break
+        case 5:
+          this.currentComponent = ListSix
+          break
+        case 6:
+          this.currentComponent = ListSeven
+          break
+        case 7:
+          this.currentComponent = ListEight
+          break
+        case 8:
+          this.currentComponent = ListNine
+          break
+        case 9:
+          this.currentComponent = ListTen
+          break
+        case 10:
+          this.currentComponent = ListEleven
+          break
+        case 11:
+          this.currentComponent = ListTwelve
+          break
+        case 12:
+          this.currentComponent = ListThirteen
+          break
+        case 13:
+          this.currentComponent = ListFourteen
+          break
+        case 14:
+          this.currentComponent = ListFifteen
+          break
+        case 15:
+          this.currentComponent = ListSixteen
+          break
+        case 16:
+          this.currentComponent = ListSeventeen
+          break
+        case 17:
+          this.currentComponent = ListEighteen
+          break
+      }
+    },
+    offListShow () {
     }
   }
 }
@@ -69,6 +198,7 @@ export default {
     }
     .slider-left{
         min-width: 200px;
+        position: relative;
     }
     .slider-left>ul{
         list-style: none;

@@ -159,6 +159,13 @@ export default {
     }
     .item-btn{
         justify-self: end;
-        margin: 0px 15px 20px;
+        margin: 0 18px 20px;
+        height: 36px;
+        background-color: #243a76;
+        color: white;
+        font-weight: 200;
+        font-size: 12px;
+        border: none;
+        border-radius: 4px;
     }
 </style>
